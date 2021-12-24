@@ -1,9 +1,9 @@
 {
     "type": "mysql",
-    "host": "localhost",
+    "host": "calendar.cnefjg4iq07j.us-east-1.rds.amazonaws.com",
     "port": 3306,
     "username": "root",
-    "password": "Linux200*",
+    "password": "DW5LnaGsheoBoWNytWpa",
     "database": "calendar",
     "entities": ["dist/**/*.entity.js"],
     "synchronize": true
