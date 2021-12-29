@@ -26,4 +26,8 @@ export class Reminder {
     @ApiProperty()
     @Column()
     city:string;
+
+    @ApiProperty()
+    @Column()
+    ipAddress:string;
 }

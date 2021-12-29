@@ -7,10 +7,10 @@ import { Reminder } from './reminder.entity';
 export class RemindersService {
     constructor(@InjectRepository(Reminder) private reminderRepository: Repository<Reminder>) { }
 
-    async getReminderByDateCode(_dateCode: string): Promise<Reminder[]> {
+    async getReminderByDateCode(_dateCode: string, _ipAddress: string): Promise<Reminder[]> {
         return await this.reminderRepository.find({
-            select: ["id", "dateCode", "title", "fromTime", "toTime"],
-            where: [{ "dateCode" : _dateCode }]
+            select: ["id", "dateCode", "title", "fromTime", "toTime", "city", "ipAddress"],
+            where: [{ "dateCode" : _dateCode, "ipAddress" : _ipAddress }]
         });
     }
 
