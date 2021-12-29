@@ -1,9 +1,9 @@
 {
     "type": "mysql",
-    "host": "calendar.cnefjg4iq07j.us-east-1.rds.amazonaws.com",
+    "host": "calendar.cikj0eyzpsa5.us-east-2.rds.amazonaws.com",
     "port": 3306,
     "username": "root",
-    "password": "DW5LnaGsheoBoWNytWpa",
+    "password": "kMcjG6hWYIqnfL605PPu",
     "database": "calendar",
     "entities": ["dist/**/*.entity.js"],
     "synchronize": true
