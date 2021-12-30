@@ -9,7 +9,7 @@ export class Reminder {
 
     @ApiProperty()
     @Column()
-    dateCode:string;
+    dateCode:number;
 
     @ApiProperty()
     @Column({ length: 30 })

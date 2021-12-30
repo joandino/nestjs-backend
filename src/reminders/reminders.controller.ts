@@ -19,11 +19,12 @@ export class RemindersController {
     @ApiInternalServerErrorResponse({
         description : 'Internal server error'
     })
-    @Get('/:dateCode/:ipAddress')
+    @Get('/:startDateCode/:endDateCode/:ipAddress')
     @ApiParam({ name: 'ipAddress', required: true, description: 'public ip address of the computer where reminder was created', schema: { type: 'string' } })
-    @ApiParam({ name: 'dateCode', required: true, description: 'string date code for the reminder with this format YYYYMMDD', schema: { type: 'string' } })
+    @ApiParam({ name: 'endDateCode', required: true, description: 'string end date code for the reminder with this format YYYYMMDD', schema: { type: 'number' } })
+    @ApiParam({ name: 'startDateCode', required: true, description: 'string start date code for the reminder with this format YYYYMMDD', schema: { type: 'number' } })
     get(@Param() params) {
-        return this.service.getReminderByDateCode(params.dateCode, params.ipAddress);
+        return this.service.getReminderByDateCode(params.startDateCode, params.endDateCode, params.ipAddress);
     }
 
     @ApiOperation({ 
