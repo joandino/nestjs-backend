@@ -15,7 +15,10 @@ export class RemindersService {
     }
 
     async createReminder(reminder: Reminder){
-        this.reminderRepository.save(reminder);
+        return new Promise(resolve => {
+            const res = this.reminderRepository.insert(reminder)
+            resolve(res);
+        })
     }
 
     async updateReminder(reminder: Reminder){

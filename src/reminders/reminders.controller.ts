@@ -40,7 +40,8 @@ export class RemindersController {
     @ApiBody({ type: Reminder, description: 'Reminder object structure' })
     @Post()
     create(@Body() reminder: Reminder) {
-        return this.service.createReminder(reminder);
+        const newReminder = this.service.createReminder(reminder);
+        return newReminder;
     }
 
     @ApiOperation({ 
