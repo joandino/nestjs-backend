@@ -24,7 +24,11 @@
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+[Nest](https://github.com/nestjs/nest) framework TypeScript repository for [Calendar](https://github.com/joandino/calendar) project.
+
+Hosted in AWS and keep it running with PM2 on Linux virtual machine. 
+
+Here you can find the documentation of the [API](http://3.133.88.253:3000/swagger/)
 
 ## Installation
 
